@@ -4,91 +4,125 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        *{margin: 0;
-        padding: 0;
-    box-sizing: border-box;}
-    body{
-        width: 100%;
-        height: 100vh;
-        background-color: black;
-        color: white;
-    }
-    .container{
-        border-radius:12px;
-        margin-top: 40px;
-        width: 70%;
-        border: 6px solid cyan;
-        padding: 12px 20px;
-        box-shadow: 0px 0px 8px 4px cyan;
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: center;
-        transition: all 0.5s ease;
-        cursor: pointer;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-    .container h1{
-        margin-bottom: 20px;
-    }
-    .container label{display: inline-block;
-         margin-bottom: 20px;}
-         .container input{ padding: 12px 18px;
-            border-radius: 6px;
-            font-size: 18px;
-
-         }
-    .container button{
-        font-size: 20px;
-        padding: 12px 18px;
-        border-radius: 12px;
-        margin-bottom: 20px
-    }
-    .container button:hover{
-        background: aqua;
-    }
-    .container button:active{color: red;}
-    .container ol{
-        text-align: left;
-      
-        list-style-position: inside;
-        margin: 0 auto;
-
-    }
-    </style>
+    <title>Personal Portfolio Website</title>
+    <link rel="style sheet" href="style.css">
 </head>
-
 <body>
+    <style>
+        *{ 
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container{
+    background-color:antiquewhite;
+    width: 100%;
+    height: 100vh;
+    border: 2px solid rgb(124, 112, 216);
+}
+nav{
+    display: flex;
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    
+}
+
+a{
+     text-decoration: none;
+     color: black;
+     font-weight: bold;
+
+}
+
+nav ul li a:hover{
+    color: red;
+
+}
+.detail{
+    margin: 8%;
+    margin-top: 13%;
+
+}
+.detail h1{
+    font-size: 50px;
+ 
+    color: black;
+    margin-bottom: 20px;
+
+}
+.detail p{
+    color: violet;
+    line-height: 22px;
+
+}
+.detail a{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin: 50px 0;
+    border-radius: 5px;
+}
+.images{
+    width: 45%;
+    height:80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+.images img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    transition: bottom 1s, left 1s;
+
+}
+img{
+    height: 160px;
+    width: 160px;
+}
+.images :hover.clz{
+    left: 45%;
+}
+
+.clz{ width: 200px;
+height: 150px;}
+    </style>
     <div class="container">
-        <h1> HELLO, I am Listing App</h1>
-        <label for="input-field"> Enter your List item</label>
-        <input type="text" id="input-field" placeholder="Enter your item"><br>
-        <button id="button">Save Item</button>
-        <ol id="list">
-            
-        </ol>
-    </div>
-    <script>
-        let inputfield = document.getElementById("input-field");
-        let button = document.getElementById("button");
-        let orderlist = document.getElementById("list");
-        button.addEventListener("click" ,generatelistitem);
-        function generatelistitem(){
-            // console.log("i am function");
-            let content= inputfield.value;
-            if(content !=""){
-                let listitem= document.createElement("li");
-        listitem.append(content);
-        orderlist.append(listitem);
-        inputfield.value = "";
-
-
-            }
-        }
-        //     console.log(content)
+        <nav>
+            <img src="/logoperfect.png"  class="logo">
+            <ul>
+                <li>  <a href="about.html">About</a></li>
+                <li>  <a href="contact.html">Contact</a></li>
+                <li>  <a href="skills.html">skills</a></li>
+                <li>  <a href="Account.html"> Account</a></li>
+            </ul>
+        </nav>
+        <div class="detail">
+          <h1>  I am Babita Ku. Bhatt</h1>
+          <p>   This is My first official Portfolio website to show<br>
+        all Details and work experiences web development.       
+    </p>
+<a href="#">Download CV</a>
+        </div>
+<div class="images">
+    
+    <img src="/photo.png"  class="clz">
+</div>
         
-
-    </script>
+    </div>
+    
 </body>
-</html>
+</html
